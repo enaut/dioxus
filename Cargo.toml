@@ -110,6 +110,7 @@ version = "0.6.3"
 
 # dependencies that are shared across packages
 [workspace.dependencies]
+openssl = { version = "0.10", features = ["vendored"] }
 dioxus = { path = "packages/dioxus", version = "0.6.2" }
 dioxus-lib = { path = "packages/dioxus-lib", version = "0.6.2" }
 dioxus-core = { path = "packages/core", version = "0.6.2" }
@@ -336,6 +337,7 @@ http-range = { version = "0.1.5", optional = true }
 wgpu = { version = "0.19", optional = true }
 ouroboros = { version = "*", optional = true }
 wasm-split = { workspace = true }
+openssl = { version = "0.10", features = ["vendored"] }
 
 [dev-dependencies]
 dioxus = { workspace = true, features = ["router"] }
@@ -348,6 +350,7 @@ rand = { version = "0.8.4", features = ["small_rng"] }
 form_urlencoded = "1.2.0"
 async-std = "1.12.0"
 web-time = "1.1.0"
+openssl = { version = "0.10", features = ["vendored"] }
 
 [target.'cfg(target_arch = "wasm32")'.dev-dependencies]
 getrandom = { version = "0.2.12", features = ["js"] }
