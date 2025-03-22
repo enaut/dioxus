@@ -71,7 +71,7 @@ jobs:
         
       - name: Install openssl on aarch64-linux
         if: matrix.platform.target == 'aarch64-unknown-linux-gnu'
-        run: apt-get update && apt-get install -y libssl-dev
+        run: sudo apt-get update && apt-get install -y libssl-dev
     
       - name: Install nasm for windows (tls)
         if: ${{ matrix.platform.target == 'x86_64-pc-windows-msvc' }}
